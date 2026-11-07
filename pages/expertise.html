@@ -1,0 +1,847 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Our Expertise | Bawabat Adan</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================
+   GENERAL SETTINGS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --navy: #101d2b;
+    --gold: #c69a52;
+    --white: #ffffff;
+    --light: #f5f5f2;
+    --text: #687582;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: #333;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+header {
+    width: 100%;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+}
+
+.logo {
+    font-family: 'Manrope', sans-serif;
+    font-size: 21px;
+    font-weight: 800;
+    color: var(--navy);
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+.logo small {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+    gap: 27px;
+}
+
+nav a {
+    color: var(--navy);
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--gold);
+}
+
+.menu-btn {
+    display: none;
+    font-size: 27px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: var(--navy);
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    min-height: 460px;
+    padding: 90px 8%;
+    display: flex;
+    align-items: center;
+    color: white;
+
+    background:
+    linear-gradient(
+        rgba(16,29,43,0.88),
+        rgba(16,29,43,0.72)
+    ),
+    url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1800&q=85')
+    center/cover no-repeat;
+}
+
+.hero-content {
+    max-width: 750px;
+    animation: slideUp 1s ease;
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+.hero h1 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(40px, 6vw, 65px);
+    line-height: 1.15;
+    margin: 18px 0;
+}
+
+.hero h1 span {
+    color: var(--gold);
+}
+
+.hero p {
+    color: #e1e5e9;
+    max-width: 570px;
+    font-size: 16px;
+}
+
+/* =========================
+   INTRODUCTION
+========================= */
+
+.intro {
+    padding: 85px 8%;
+    text-align: center;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.intro h2 {
+    font-family: 'Manrope', sans-serif;
+    color: var(--navy);
+    font-size: 36px;
+    margin: 12px 0 20px;
+}
+
+.intro p {
+    color: var(--text);
+    max-width: 850px;
+    margin: auto;
+}
+
+/* =========================
+   EXPERTISE CARDS
+========================= */
+
+.expertise {
+    padding: 80px 8%;
+    background: var(--light);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title h2 {
+    font-family: 'Manrope', sans-serif;
+    color: var(--navy);
+    font-size: 36px;
+    margin-top: 10px;
+}
+
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.expertise-card {
+    background: white;
+    overflow: hidden;
+    border-radius: 5px;
+    transition: 0.4s;
+    border-bottom: 4px solid transparent;
+}
+
+.expertise-card:hover {
+    transform: translateY(-10px);
+    border-bottom-color: var(--gold);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.10);
+}
+
+.expertise-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    transition: 0.5s;
+}
+
+.expertise-card:hover img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-number {
+    color: var(--gold);
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.card-content h3 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 21px;
+    color: var(--navy);
+    margin: 10px 0;
+}
+
+.card-content p {
+    color: var(--text);
+    font-size: 14px;
+}
+
+/* =========================
+   SPECIALIST CAPABILITIES
+========================= */
+
+.capabilities {
+    padding: 85px 8%;
+}
+
+.capabilities-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+    align-items: center;
+}
+
+.capabilities-image img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.capabilities-content h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 34px;
+    color: var(--navy);
+    margin: 12px 0 20px;
+}
+
+.capabilities-content p {
+    color: var(--text);
+    margin-bottom: 20px;
+}
+
+.capability-list {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.capability-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid #e5e5e5;
+    color: var(--navy);
+    font-weight: 600;
+}
+
+.capability-list li::before {
+    content: "✓";
+    color: var(--gold);
+    font-weight: 800;
+    margin-right: 12px;
+}
+
+/* =========================
+   QUALITY SECTION
+========================= */
+
+.quality {
+    background: var(--navy);
+    color: white;
+    padding: 75px 8%;
+    text-align: center;
+}
+
+.quality h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 35px;
+    margin: 12px 0 18px;
+    color: white;
+}
+
+.quality p {
+    color: #d6dce2;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* =========================
+   CALL TO ACTION
+========================= */
+
+.cta {
+    padding: 75px 8%;
+    text-align: center;
+    background: var(--light);
+}
+
+.cta h2 {
+    font-family: 'Manrope', sans-serif;
+    color: var(--navy);
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    color: var(--text);
+    margin-bottom: 25px;
+}
+
+.cta a {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy);
+    padding: 14px 30px;
+    font-weight: 800;
+    transition: 0.3s;
+}
+
+.cta a:hover {
+    background: var(--navy);
+    color: white;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #0b1520;
+    color: white;
+    padding: 30px 8%;
+    text-align: center;
+    font-size: 13px;
+}
+
+footer span {
+    color: var(--gold);
+}
+
+/* =========================
+   SCROLL ANIMATIONS
+========================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media(max-width: 900px) {
+
+    .expertise-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .capabilities-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width: 650px) {
+
+    header {
+        padding: 15px 5%;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 22px 7%;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+    .hero {
+        padding: 70px 7%;
+        min-height: 400px;
+    }
+
+    .intro,
+    .expertise,
+    .capabilities,
+    .quality,
+    .cta {
+        padding: 60px 7%;
+    }
+
+    .intro h2,
+    .section-title h2,
+    .capabilities-content h2,
+    .quality h2,
+    .cta h2 {
+        font-size: 28px;
+    }
+
+    .expertise-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .capabilities-image img {
+        height: 280px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header>
+
+    <a href="index.html" class="logo">
+        BAWABAT <span>ADAN</span>
+        <small>GENERAL CONTRACTING L.L.C.</small>
+    </a>
+
+    <button class="menu-btn" aria-label="Toggle menu">☰</button>
+
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="expertise.html" class="active">EXPERTISE</a>
+        <a href="services.html">SERVICES</a>
+        <a href="projects.html">PROJECTS</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+
+</header>
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="eyebrow">OUR EXPERTISE</div>
+
+        <h1>
+            Technical Expertise
+            <br>
+            <span>You Can Trust.</span>
+        </h1>
+
+        <p>
+            Delivering construction and specialist foundation
+            capabilities with experienced teams, technical
+            knowledge and a commitment to quality.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- INTRODUCTION -->
+
+<section class="intro reveal">
+
+    <div class="eyebrow">OUR CAPABILITIES</div>
+
+    <h2>Specialist Construction Expertise</h2>
+
+    <p>
+        Bawabat Adan General Contracting L.L.C. provides
+        building contracting and specialist foundation
+        capabilities in the United Arab Emirates.
+        Our focus is on professional execution, quality
+        workmanship, safety and meeting project requirements.
+    </p>
+
+</section>
+
+<!-- EXPERTISE CARDS -->
+
+<section class="expertise reveal">
+
+    <div class="section-title">
+
+        <div class="eyebrow">WHAT WE SPECIALIZE IN</div>
+
+        <h2>Our Technical Expertise</h2>
+
+    </div>
+
+    <div class="expertise-grid">
+
+        <div class="expertise-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=900&q=85"
+            alt="Building construction">
+
+            <div class="card-content">
+
+                <div class="card-number">01</div>
+
+                <h3>Building Construction</h3>
+
+                <p>
+                    Building contracting capabilities focused
+                    on workmanship, project requirements
+                    and professional execution.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="expertise-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=85"
+            alt="Piling foundation construction">
+
+            <div class="card-content">
+
+                <div class="card-number">02</div>
+
+                <h3>Piling Foundations</h3>
+
+                <p>
+                    Foundation contracting and piling works
+                    for different project and site requirements.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="expertise-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=900&q=85"
+            alt="Bored pile construction">
+
+            <div class="card-content">
+
+                <div class="card-number">03</div>
+
+                <h3>Bored Cast-in-Situ Piles</h3>
+
+                <p>
+                    Specialist bored cast-in-situ piling
+                    works as part of foundation solutions.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="expertise-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1508450859948-4e04fabaa4ea?auto=format&fit=crop&w=900&q=85"
+            alt="Construction engineering">
+
+            <div class="card-content">
+
+                <div class="card-number">04</div>
+
+                <h3>Micropiling</h3>
+
+                <p>
+                    Micropiling capabilities for specialist
+                    foundation and ground support requirements.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="expertise-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1590725140246-20acdee442be?auto=format&fit=crop&w=900&q=85"
+            alt="Construction shoring">
+
+            <div class="card-content">
+
+                <div class="card-number">05</div>
+
+                <h3>Shoring Systems</h3>
+
+                <p>
+                    Secant, contiguous and soldier pile
+                    shoring systems for ground support.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="expertise-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=900&q=85"
+            alt="Engineering inspection">
+
+            <div class="card-content">
+
+                <div class="card-number">06</div>
+
+                <h3>Anchoring & Dewatering</h3>
+
+                <p>
+                    Anchoring and dewatering capabilities
+                    supporting specialist construction works.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SPECIALIST CAPABILITIES -->
+
+<section class="capabilities reveal">
+
+    <div class="capabilities-container">
+
+        <div class="capabilities-image">
+
+            <img
+            src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1100&q=85"
+            alt="Construction engineering and testing">
+
+        </div>
+
+        <div class="capabilities-content">
+
+            <div class="eyebrow">TECHNICAL SERVICES</div>
+
+            <h2>Specialist Pile Testing Capabilities</h2>
+
+            <p>
+                Our company profile identifies several pile
+                testing methods within our technical activities.
+                These methods support the assessment of
+                foundation works.
+            </p>
+
+            <ul class="capability-list">
+
+                <li>Static Pile Testing</li>
+
+                <li>Bi-Directional Pile Testing</li>
+
+                <li>Dynamic Pile Testing</li>
+
+                <li>Sonic Testing</li>
+
+                <li>Pile Integrity Testing</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- QUALITY SECTION -->
+
+<section class="quality reveal">
+
+    <div class="eyebrow">OUR COMMITMENT</div>
+
+    <h2>Quality, Safety & Professionalism</h2>
+
+    <p>
+        We emphasize quality workmanship, client satisfaction,
+        continuous improvement and compliance with applicable
+        project requirements and standards. Our safety approach
+        includes training, awareness campaigns, routine checks
+        and HSE policies.
+    </p>
+
+</section>
+
+<!-- CALL TO ACTION -->
+
+<section class="cta reveal">
+
+    <h2>Have a Construction Project?</h2>
+
+    <p>
+        Contact our team to discuss your construction
+        and foundation requirements.
+    </p>
+
+    <a href="contact.html">CONTACT US</a>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    © <span id="year"></span>
+    BAWABAT ADAN GENERAL CONTRACTING L.L.C.
+    All Rights Reserved.
+
+</footer>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+// MOBILE NAVIGATION
+
+const menuBtn = document.querySelector(".menu-btn");
+const nav = document.querySelector("nav");
+
+menuBtn.addEventListener("click", function() {
+
+    nav.classList.toggle("open");
+
+    menuBtn.textContent =
+        nav.classList.contains("open") ? "✕" : "☰";
+
+});
+
+// CLOSE MENU AFTER CLICK
+
+document.querySelectorAll("nav a").forEach(link => {
+
+    link.addEventListener("click", function() {
+
+        nav.classList.remove("open");
+
+        menuBtn.textContent = "☰";
+
+    });
+
+});
+
+// AUTOMATIC COPYRIGHT YEAR
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+// SCROLL REVEAL ANIMATION
+
+const observer = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            entry.target.classList.add("show");
+
+        }
+
+    });
+
+}, {
+    threshold: 0.15
+});
+
+document.querySelectorAll(".reveal").forEach(section => {
+
+    observer.observe(section);
+
+});
+
+</script>
+
+</body>
+</html>

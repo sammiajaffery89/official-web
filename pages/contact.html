@@ -1,0 +1,1009 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact Us | BAWABAT ADAN Building Contracting L.L.C.</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root {
+    --navy: #101d2b;
+    --navy-light: #1b2d40;
+    --gold: #c69a52;
+    --light: #f5f5f2;
+    --white: #ffffff;
+    --text: #626b73;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: white;
+    color: var(--navy);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* NAVBAR */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(16, 29, 43, 0.98);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.navbar {
+    min-height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    display: block;
+    color: var(--gold);
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-top: 5px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--gold);
+}
+
+.menu-btn {
+    display: none;
+    border: none;
+    background: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 470px;
+    padding-top: 85px;
+    display: flex;
+    align-items: center;
+    background:
+    linear-gradient(rgba(10,20,32,0.82), rgba(10,20,32,0.82)),
+    url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=85');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    color: white;
+    max-width: 750px;
+}
+
+.hero-label {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 6vw, 65px);
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: var(--gold);
+}
+
+.hero p {
+    color: #dce1e5;
+    font-size: 14px;
+    line-height: 1.9;
+    max-width: 620px;
+}
+
+/* GENERAL SECTION */
+
+.section {
+    padding: 85px 0;
+}
+
+.section-label {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(30px, 4vw, 42px);
+    margin-bottom: 18px;
+}
+
+.section-desc {
+    color: var(--text);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+/* CONTACT SECTION */
+
+.contact-section {
+    background: var(--light);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 55px;
+    align-items: start;
+}
+
+/* CONTACT INFORMATION */
+
+.contact-info {
+    padding-top: 10px;
+}
+
+.contact-info > p {
+    color: var(--text);
+    font-size: 13px;
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
+
+.info-card {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    background: white;
+    padding: 22px;
+    margin-bottom: 17px;
+    border-left: 3px solid var(--gold);
+    transition: 0.3s;
+}
+
+.info-card:hover {
+    transform: translateX(5px);
+}
+
+.info-icon {
+    min-width: 45px;
+    height: 45px;
+    background: var(--navy);
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.info-card h3 {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.info-card p,
+.info-card a {
+    color: var(--text);
+    font-size: 12px;
+    line-height: 1.8;
+    word-break: break-word;
+}
+
+.info-card a:hover {
+    color: var(--gold);
+}
+
+/* CONTACT FORM */
+
+.form-box {
+    background: white;
+    padding: 40px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.06);
+}
+
+.form-box h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 29px;
+    margin-bottom: 12px;
+}
+
+.form-box > p {
+    color: var(--text);
+    font-size: 12px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 9px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #dce0e3;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    background: #fafafa;
+    transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--gold);
+    background: white;
+}
+
+.form-group textarea {
+    height: 130px;
+    resize: vertical;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 16px;
+    background: var(--navy);
+    color: white;
+    border: none;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: var(--gold);
+    color: var(--navy);
+}
+
+.form-note {
+    color: var(--text);
+    font-size: 10px;
+    line-height: 1.7;
+    margin-top: 13px;
+}
+
+/* WHY CONTACT US */
+
+.why-section {
+    background: white;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.why-card {
+    padding: 30px;
+    background: var(--light);
+    border-bottom: 3px solid var(--gold);
+    transition: 0.3s;
+}
+
+.why-card:hover {
+    transform: translateY(-7px);
+}
+
+.why-card .icon {
+    font-size: 30px;
+    margin-bottom: 17px;
+}
+
+.why-card h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.why-card p {
+    color: var(--text);
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+/* MAP */
+
+.map-section {
+    background: var(--navy);
+    color: white;
+}
+
+.map-section .section-desc {
+    color: #c8d0d7;
+}
+
+.map-placeholder {
+    margin-top: 35px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 35px;
+    text-align: center;
+}
+
+.map-placeholder p {
+    color: #d3d8dd;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.map-placeholder a {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 13px 23px;
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 11px;
+    font-weight: 800;
+}
+
+/* CTA */
+
+.cta {
+    padding: 75px 20px;
+    text-align: center;
+    background: var(--light);
+}
+
+.cta h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 4vw, 40px);
+    margin-bottom: 15px;
+}
+
+.cta p {
+    color: var(--text);
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.cta a {
+    display: inline-block;
+    padding: 15px 28px;
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 11px;
+    font-weight: 800;
+}
+
+/* FOOTER */
+
+footer {
+    background: #0b1520;
+    color: white;
+    text-align: center;
+    padding: 35px 0;
+}
+
+footer h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+footer h3 span {
+    color: var(--gold);
+}
+
+footer p {
+    color: #aeb7c0;
+    font-size: 11px;
+    line-height: 1.9;
+}
+
+/* WHATSAPP FLOATING BUTTON */
+
+.whatsapp {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    width: 55px;
+    height: 55px;
+    background: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    z-index: 999;
+}
+
+/* SCROLL ANIMATION */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 900px) {
+    .contact-grid {
+        gap: 30px;
+    }
+
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 700px) {
+
+    .navbar {
+        min-height: 75px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: var(--navy);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 25px 5%;
+        gap: 22px;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .hero {
+        min-height: 420px;
+    }
+
+    .contact-grid,
+    .form-row,
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-box {
+        padding: 25px;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header>
+    <div class="container navbar">
+
+        <a href="index.html" class="logo">
+            BAWABAT ADAN
+            <span>BUILDING CONTRACTING L.L.C.</span>
+        </a>
+
+        <button class="menu-btn" id="menuBtn"
+        aria-label="Open navigation" aria-expanded="false">☰</button>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="index.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="expertise.html">EXPERTISE</a>
+            <a href="services.html">SERVICES</a>
+            <a href="projects.html">PROJECTS</a>
+            <a href="contact.html" class="active">CONTACT</a>
+        </nav>
+
+    </div>
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+    <div class="container hero-content reveal">
+
+        <div class="hero-label">LET'S CONNECT</div>
+
+        <h1>Contact <span>Our Team.</span></h1>
+
+        <p>
+            Have a construction project or need specialist
+            foundation solutions? Get in touch with BAWABAT ADAN
+            BUILDING CONTRACTING L.L.C.
+        </p>
+
+    </div>
+</section>
+
+<!-- CONTACT DETAILS AND FORM -->
+
+<section class="section contact-section">
+
+    <div class="container contact-grid">
+
+        <!-- LEFT SIDE -->
+
+        <div class="contact-info reveal">
+
+            <div class="section-label">GET IN TOUCH</div>
+
+            <h2 class="section-title">Let's Discuss Your Project</h2>
+
+            <p>
+                We welcome enquiries about building construction,
+                piling foundation contracting and specialist
+                construction services. Contact us using the details
+                below or send an enquiry through our form.
+            </p>
+
+            <div class="info-card">
+
+                <div class="info-icon">✉</div>
+
+                <div>
+                    <h3>Email Address</h3>
+                    <a href="mailto:bawabat2@gmail.com">
+                        bawabat2@gmail.com
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="info-card">
+
+                <div class="info-icon">🌐</div>
+
+                <div>
+                    <h3>Website</h3>
+                    <p>www.gcme.com</p>
+                    <p>Verify this website address before publishing.</p>
+                </div>
+
+            </div>
+
+            <div class="info-card">
+
+                <div class="info-icon">🏗️</div>
+
+                <div>
+                    <h3>Our Business</h3>
+                    <p>
+                        Building Contracting<br>
+                        Piling Foundation Contracting
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="info-card">
+
+                <div class="info-icon">📍</div>
+
+                <div>
+                    <h3>Location</h3>
+                    <p>United Arab Emirates (UAE)</p>
+                    <p>Contact us for our office address.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDE FORM -->
+
+        <div class="form-box reveal">
+
+            <h2>Send Us an Enquiry</h2>
+
+            <p>
+                Complete the form below and your email application
+                will open with your enquiry prepared.
+            </p>
+
+            <form id="contactForm">
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="name">YOUR NAME *</label>
+                        <input type="text" id="name"
+                        placeholder="Enter your name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">EMAIL ADDRESS *</label>
+                        <input type="email" id="email"
+                        placeholder="Enter your email" required>
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="phone">PHONE NUMBER</label>
+                        <input type="tel" id="phone"
+                        placeholder="Enter your phone number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">SERVICE REQUIRED *</label>
+
+                        <select id="service" required>
+                            <option value="">Select a service</option>
+                            <option>Building Contracting</option>
+                            <option>Piling Foundation Contracting</option>
+                            <option>Bored Cast-in-Situ Piles</option>
+                            <option>Micropiling Works</option>
+                            <option>Shoring Works</option>
+                            <option>Anchoring and Dewatering</option>
+                            <option>Pile Testing</option>
+                            <option>Other Enquiry</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="subject">SUBJECT *</label>
+
+                    <input type="text" id="subject"
+                    placeholder="Enter your subject" required>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="message">YOUR MESSAGE *</label>
+
+                    <textarea id="message"
+                    placeholder="Tell us about your project..."
+                    required></textarea>
+
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    SEND ENQUIRY →
+                </button>
+
+                <p class="form-note">
+                    * Required fields. Your email application will open
+                    so you can review and send the enquiry.
+                </p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- WHY CONTACT US -->
+
+<section class="section why-section">
+
+    <div class="container">
+
+        <div class="reveal">
+
+            <div class="section-label">WHY WORK WITH US</div>
+
+            <h2 class="section-title">Let's Build Something Great Together</h2>
+
+            <p class="section-desc">
+                We aim to provide dependable construction solutions
+                through professional expertise, quality practices
+                and a commitment to client satisfaction.
+            </p>
+
+        </div>
+
+        <div class="why-grid">
+
+            <div class="why-card reveal">
+                <div class="icon">🏗️</div>
+                <h3>Construction Expertise</h3>
+                <p>
+                    Building construction and specialist foundation
+                    capabilities for different project requirements.
+                </p>
+            </div>
+
+            <div class="why-card reveal">
+                <div class="icon">⭐</div>
+                <h3>Quality Commitment</h3>
+                <p>
+                    Focus on workmanship, applicable standards
+                    and continuous improvement.
+                </p>
+            </div>
+
+            <div class="why-card reveal">
+                <div class="icon">🤝</div>
+                <h3>Client Relationships</h3>
+                <p>
+                    We value trust, communication and professional
+                    relationships with our clients and partners.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- MAP / LOCATION -->
+
+<section class="section map-section">
+
+    <div class="container">
+
+        <div class="reveal">
+
+            <div class="section-label">OUR PRESENCE</div>
+
+            <h2 class="section-title">Based in the UAE</h2>
+
+            <p class="section-desc">
+                BAWABAT ADAN BUILDING CONTRACTING L.L.C.
+                operates in the United Arab Emirates.
+                Contact our team to confirm our office location
+                and arrange a meeting.
+            </p>
+
+        </div>
+
+        <div class="map-placeholder reveal">
+
+            <p>
+                For accurate directions, please contact our team
+                and confirm the company's office address.
+            </p>
+
+            <a href="mailto:bawabat2@gmail.com">
+                EMAIL OUR TEAM
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <div class="container reveal">
+
+        <h2>Ready to Start a Conversation?</h2>
+
+        <p>
+            Tell us about your construction requirements.
+            We look forward to hearing from you.
+        </p>
+
+        <a href="mailto:bawabat2@gmail.com">
+            EMAIL US TODAY
+        </a>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="container">
+
+        <h3>BAWABAT <span>ADAN</span></h3>
+
+        <p>BUILDING CONTRACTING L.L.C.</p>
+
+        <p>Email: bawabat2@gmail.com</p>
+
+        <p>
+            © <span id="year"></span>
+            BAWABAT ADAN. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+<!-- WHATSAPP BUTTON -->
+
+<!-- Replace 971XXXXXXXXX with the company's WhatsApp number -->
+
+<a class="whatsapp"
+href="https://wa.me/971XXXXXXXXX"
+target="_blank"
+rel="noopener"
+aria-label="Contact us on WhatsApp">☏</a>
+
+<script>
+
+// MOBILE NAVIGATION
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", function() {
+
+    navLinks.classList.toggle("open");
+
+    const isOpen = navLinks.classList.contains("open");
+
+    menuBtn.setAttribute("aria-expanded", isOpen);
+    menuBtn.textContent = isOpen ? "✕" : "☰";
+
+});
+
+document.querySelectorAll(".nav-links a").forEach(function(link) {
+
+    link.addEventListener("click", function() {
+
+        navLinks.classList.remove("open");
+        menuBtn.textContent = "☰";
+        menuBtn.setAttribute("aria-expanded", "false");
+
+    });
+
+});
+
+// CONTACT FORM - EMAIL APPLICATION
+
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const service = document.getElementById("service").value;
+    const subject = document.getElementById("subject").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    const body =
+        "Name: " + name + "\n" +
+        "Email: " + email + "\n" +
+        "Phone: " + phone + "\n" +
+        "Service Required: " + service + "\n\n" +
+        "Message:\n" + message;
+
+    const mailtoLink =
+        "mailto:bawabat2@gmail.com" +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
+
+    window.location.href = mailtoLink;
+
+});
+
+// SCROLL REVEAL ANIMATION
+
+const revealElements = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver(function(entries) {
+
+    entries.forEach(function(entry) {
+
+        if (entry.isIntersecting) {
+
+            entry.target.classList.add("show");
+            observer.unobserve(entry.target);
+
+        }
+
+    });
+
+}, {
+    threshold: 0.12
+});
+
+revealElements.forEach(function(element) {
+    observer.observe(element);
+});
+
+// CURRENT YEAR
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+</script>
+
+</body>
+</html>

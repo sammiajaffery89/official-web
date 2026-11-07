@@ -1,0 +1,961 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BAWABAT ADAN | General Contracting L.L.C.</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ===== GENERAL ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: #192635;
+}
+
+:root {
+    --navy: #101d2b;
+    --gold: #c69a52;
+    --light: #f5f4f0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+section {
+    padding: 90px 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Manrope', sans-serif;
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+/* ===== TOP BAR ===== */
+.topbar {
+    background: #09131e;
+    color: white;
+    padding: 10px 5%;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* ===== NAVBAR ===== */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
+    box-shadow: 0 2px 15px #00000010;
+}
+
+.navbar {
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    background: var(--gold);
+    color: var(--navy);
+    padding: 12px;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.logo h3 {
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: var(--navy);
+}
+
+.logo small {
+    font-size: 9px;
+    color: #777;
+    letter-spacing: 1px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--navy);
+    font-size: 12px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+.nav-btn {
+    background: var(--navy);
+    color: white !important;
+    padding: 13px 20px;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* ===== HERO ===== */
+.hero {
+    min-height: 680px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: white;
+    background:
+    linear-gradient(90deg, #09131ef2, #09131e88),
+    url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=2000&q=85')
+    center/cover no-repeat;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 76px);
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: var(--gold);
+}
+
+.hero p {
+    max-width: 550px;
+    color: #ddd;
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 25px;
+    background: var(--gold);
+    color: var(--navy);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 10px;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-4px);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+/* ===== ABOUT ===== */
+.about {
+    background: var(--light);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+    align-items: center;
+}
+
+.about h2, .section-title {
+    font-size: clamp(30px, 4vw, 45px);
+    line-height: 1.2;
+    margin-bottom: 22px;
+    color: var(--navy);
+}
+
+.about h2 span, .section-title span {
+    color: var(--gold);
+}
+
+.about p {
+    color: #68727c;
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 15px;
+}
+
+.about img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+}
+
+/* ===== EXPERTISE ===== */
+.expertise {
+    background: var(--navy);
+    color: white;
+    text-align: center;
+}
+
+.expertise .section-title {
+    color: white;
+}
+
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 45px;
+}
+
+.expertise-card {
+    border: 1px solid #526071;
+    padding: 35px 20px;
+    transition: .3s;
+}
+
+.expertise-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-8px);
+}
+
+.expertise-card .number {
+    color: var(--gold);
+    font-size: 13px;
+}
+
+.expertise-card h3 {
+    margin: 20px 0 12px;
+    font-size: 19px;
+}
+
+.expertise-card p {
+    color: #bbc3cb;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/* ===== SERVICES ===== */
+.services {
+    text-align: center;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 45px;
+}
+
+.service-card {
+    background: var(--light);
+    text-align: left;
+    transition: .3s;
+    overflow: hidden;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px #00000015;
+}
+
+.service-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.service-card div {
+    padding: 25px;
+}
+
+.service-card h3 {
+    color: var(--navy);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 13px;
+    line-height: 1.8;
+    color: #68727c;
+}
+
+/* ===== WHY CHOOSE US ===== */
+.why {
+    background: var(--light);
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    align-items: center;
+}
+
+.why-grid img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+}
+
+.why-item {
+    padding: 17px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.why-item h3 {
+    color: var(--navy);
+    margin-bottom: 7px;
+    font-size: 17px;
+}
+
+.why-item p {
+    color: #68727c;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* ===== PROJECTS ===== */
+.projects {
+    text-align: center;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.project-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.project-card:hover img {
+    transform: scale(1.08);
+}
+
+.project-card h3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(transparent, #09131ef0);
+    color: white;
+    padding: 35px 15px 20px;
+    font-size: 17px;
+}
+
+/* ===== MISSION ===== */
+.mission {
+    background: var(--navy);
+    color: white;
+}
+
+.mission-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.mission h2 {
+    color: white;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.mission h2 span {
+    color: var(--gold);
+}
+
+.mission-item {
+    border-top: 1px solid #526071;
+    padding-top: 20px;
+}
+
+.mission-item h3 {
+    color: var(--gold);
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.mission-item p {
+    color: #cbd1d7;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* ===== CONTACT ===== */
+.contact {
+    background: var(--light);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.contact p {
+    color: #68727c;
+    line-height: 1.9;
+}
+
+.contact-info {
+    margin-top: 30px;
+}
+
+.contact-info strong {
+    display: block;
+    color: var(--gold);
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+.contact-form {
+    background: white;
+    padding: 35px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0 18px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-family: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--gold);
+}
+
+.contact-form button {
+    border: none;
+    cursor: pointer;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #09131e;
+    color: white;
+    padding: 35px 5%;
+    text-align: center;
+}
+
+footer p {
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 12px;
+}
+
+/* ===== ANIMATIONS ===== */
+.reveal {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity .8s ease, transform .8s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media(max-width: 850px) {
+    .menu-btn {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 20px 5%;
+        gap: 0;
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+    nav a {
+        padding: 13px 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .nav-btn {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .about-grid,
+    .why-grid,
+    .contact-grid,
+    .mission-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .expertise-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services-grid,
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 520px) {
+    .topbar {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hero {
+        min-height: 620px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .expertise-grid,
+    .services-grid,
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 65px 0;
+    }
+
+    .contact-form {
+        padding: 22px;
+    }
+}
+
+@media(prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+        animation: none !important;
+        transition-duration: .01ms !important;
+    }
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+    <span>UAE Construction & Foundation Solutions</span>
+    <span>📧 bawabat2@gmail.com</span>
+</div>
+
+<header>
+<div class="container navbar">
+    <div class="logo">
+        <div class="logo-icon">BA</div>
+        <div>
+            <h3>BAWABAT ADAN</h3>
+            <small>GENERAL CONTRACTING L.L.C.</small>
+        </div>
+    </div>
+
+    <button class="menu-btn" aria-label="Toggle navigation">☰</button>
+
+    <nav>
+        <a href="#home">HOME</a>
+        <a href="./pages/about.html">ABOUT</a>
+        <a href="./pages/expertise.html">EXPERTISE</a>
+        <a href="./pages/services.html">SERVICES</a>
+        <a href="./pages/projects.html">PROJECTS</a>
+        <a href="./pages/contact.html" class="nav-btn">CONTACT US ↗</a>
+    </nav>
+</div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+<div class="container hero-content reveal">
+    <div class="eyebrow">BUILDING WITH PURPOSE · UAE</div>
+    <h1>Strong Foundations.<br><span>Lasting Structures.</span></h1>
+    <p>
+        Delivering construction and specialist foundation solutions
+        with a commitment to quality, safety and client satisfaction.
+    </p>
+    <a href="#services" class="btn">EXPLORE SERVICES ↗</a>
+    <a href="#about" class="btn btn-outline">ABOUT OUR COMPANY</a>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+<div class="container about-grid">
+    <div class="reveal">
+        <div class="eyebrow">WHO WE ARE</div>
+        <h2>Building Trust Through <span>Experience.</span></h2>
+        <p>
+            BAWABAT ADAN GENERAL CONTRACTING L.L.C.
+            was established in the United Arab Emirates
+            to provide high-quality services in the construction industry.
+        </p>
+        <p>
+            Our company brings together experienced personnel,
+            qualified professionals and dedicated teams,
+            with a focus on quality, safety and customer satisfaction.
+        </p>
+        <a href="#contact" class="btn">CONTACT OUR TEAM ↗</a>
+    </div>
+
+    <div class="reveal">
+        <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1000&q=85" alt="Modern architecture">
+    </div>
+</div>
+</section>
+
+<!-- EXPERTISE -->
+<section class="expertise" id="expertise">
+<div class="container">
+    <div class="eyebrow">OUR CAPABILITIES</div>
+    <h2 class="section-title">Our Core <span>Expertise</span></h2>
+
+    <div class="expertise-grid">
+        <div class="expertise-card reveal">
+            <span class="number">01</span>
+            <h3>Building Contracting</h3>
+            <p>Construction activities with a focus on quality and delivery.</p>
+        </div>
+
+        <div class="expertise-card reveal">
+            <span class="number">02</span>
+            <h3>Deep Foundations</h3>
+            <p>Bored cast-in-situ piles and micropiling solutions.</p>
+        </div>
+
+        <div class="expertise-card reveal">
+            <span class="number">03</span>
+            <h3>Ground Engineering</h3>
+            <p>Shoring, anchoring and dewatering works.</p>
+        </div>
+
+        <div class="expertise-card reveal">
+            <span class="number">04</span>
+            <h3>Pile Testing</h3>
+            <p>Static, dynamic, sonic and integrity testing.</p>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+<div class="container">
+    <div class="eyebrow">WHAT WE DO</div>
+    <h2 class="section-title">Our Professional <span>Services</span></h2>
+
+    <div class="services-grid">
+
+        <div class="service-card reveal">
+            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=85" alt="Building construction">
+            <div>
+                <h3>Building Contracting</h3>
+                <p>Construction services focused on workmanship and project coordination.</p>
+            </div>
+        </div>
+
+        <div class="service-card reveal">
+            <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=800&q=85" alt="Piling equipment">
+            <div>
+                <h3>Piling & Micropiling</h3>
+                <p>Specialist deep foundation works for different site conditions.</p>
+            </div>
+        </div>
+
+        <div class="service-card reveal">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=85" alt="Shoring construction">
+            <div>
+                <h3>Shoring & Anchoring</h3>
+                <p>Secant, contiguous and soldier pile walls and ground anchors.</p>
+            </div>
+        </div>
+
+        <div class="service-card reveal">
+            <img src="https://images.unsplash.com/photo-1517089596392-fb9a9033e05b?auto=format&fit=crop&w=800&q=85" alt="Construction site">
+            <div>
+                <h3>Dewatering Works</h3>
+                <p>Deep well and wellpoint dewatering systems.</p>
+            </div>
+        </div>
+
+        <div class="service-card reveal">
+            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=85" alt="Engineering inspection">
+            <div>
+                <h3>Pile Testing</h3>
+                <p>Static, dynamic, sonic and pile integrity testing.</p>
+            </div>
+        </div>
+
+        <div class="service-card reveal">
+            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=85" alt="Construction project">
+            <div>
+                <h3>Foundation Solutions</h3>
+                <p>Foundation-related activities for construction projects.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why">
+<div class="container why-grid">
+    <div class="reveal">
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1000&q=85" alt="Construction team at work">
+    </div>
+
+    <div class="reveal">
+        <div class="eyebrow">WHY CHOOSE US</div>
+        <h2 class="section-title">Quality Is Our <span>Commitment.</span></h2>
+
+        <div class="why-item">
+            <h3>✓ Safety First</h3>
+            <p>Safety awareness, training, site checks and risk management.</p>
+        </div>
+
+        <div class="why-item">
+            <h3>✓ Quality Workmanship</h3>
+            <p>Commitment to client requirements and applicable standards.</p>
+        </div>
+
+        <div class="why-item">
+            <h3>✓ Professional Team</h3>
+            <p>Experienced personnel and qualified professionals.</p>
+        </div>
+
+        <div class="why-item">
+            <h3>✓ Client Satisfaction</h3>
+            <p>Strong relationships built on trust and mutual respect.</p>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section class="projects" id="projects">
+<div class="container">
+    <div class="eyebrow">OUR WORK</div>
+    <h2 class="section-title">Selected <span>Projects</span></h2>
+
+    <div class="project-grid">
+        <div class="project-card reveal">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85" alt="Modern villa">
+            <h3>G+1 Villa Projects</h3>
+        </div>
+
+        <div class="project-card reveal">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=85" alt="Commercial tower">
+            <h3>Building Works</h3>
+        </div>
+
+        <div class="project-card reveal">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=85" alt="Construction works">
+            <h3>Foundation Works</h3>
+        </div>
+    </div>
+    <p style="font-size:11px;color:#777;margin-top:20px;">Sample images for website layout; replace with actual company project photographs.</p>
+</div>
+</section>
+
+<!-- MISSION & VISION -->
+<section class="mission">
+<div class="container mission-grid">
+    <div class="reveal">
+        <div class="eyebrow">OUR DIRECTION</div>
+        <h2>Driven by Purpose.<br><span>Focused on Progress.</span></h2>
+    </div>
+
+    <div class="mission-item reveal">
+        <h3>OUR MISSION</h3>
+        <p>
+            To maintain strong foundations of trust and mutual respect
+            with clients and project partners, making customer satisfaction
+            our foremost priority.
+        </p>
+    </div>
+
+    <div class="mission-item reveal">
+        <h3>OUR VISION</h3>
+        <p>
+            To become a regional leader in the building construction
+            industry, providing value through quality products
+            and superior services.
+        </p>
+    </div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+<div class="container contact-grid">
+
+    <div class="reveal">
+        <div class="eyebrow">GET IN TOUCH</div>
+        <h2 class="section-title">Let's Build Something <span>Great.</span></h2>
+        <p>Contact our team to discuss your next construction or foundation project.</p>
+
+        <div class="contact-info">
+            <strong>EMAIL ADDRESS</strong>
+            <p>bawabat2@gmail.com</p>
+
+            <strong>WEBSITE</strong>
+            <p>www.gcme.com</p>
+        </div>
+    </div>
+
+    <form class="contact-form reveal" id="contactForm">
+        <label>Your Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+
+        <label>Your Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+
+        <label>Your Message</label>
+        <textarea id="message" rows="5" placeholder="Tell us about your project" required></textarea>
+
+        <button type="submit" class="btn">SEND ENQUIRY ↗</button>
+        <p style="font-size:10px;margin-top:12px;">This demo prepares an email in your email application.</p>
+    </form>
+
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <h3>BAWABAT ADAN GENERAL CONTRACTING L.L.C.</h3>
+    <p>Building with purpose. Founding with precision.</p>
+    <p>© <span id="year"></span> BAWABAT ADAN. All Rights Reserved.</p>
+</footer>
+
+<script>
+// MOBILE MENU
+const menuBtn = document.querySelector('.menu-btn');
+const nav = document.querySelector('nav');
+
+menuBtn.addEventListener('click', () => {
+    nav.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', nav.classList.contains('open'));
+});
+
+document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', () => {
+        nav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+    });
+});
+
+// SCROLL ANIMATIONS
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.reveal').forEach(element => {
+    observer.observe(element);
+});
+
+// CONTACT FORM
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    const subject = encodeURIComponent('Website Enquiry from ' + name);
+    const body = encodeURIComponent(
+        'Name: ' + name +
+        '\nEmail: ' + email +
+        '\nMessage: ' + message
+    );
+
+    window.location.href =
+        'mailto:bawabat2@gmail.com?subject=' + subject + '&body=' + body;
+});
+
+// FOOTER YEAR
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

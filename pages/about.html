@@ -1,0 +1,596 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | Bawabat Adan</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --navy: #101d2b;
+    --gold: #c69a52;
+    --light: #f5f5f2;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: #333;
+    line-height: 1.7;
+}
+
+/* NAVBAR */
+
+header {
+    width: 100%;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+}
+
+.logo {
+    font-family: 'Manrope', sans-serif;
+    font-size: 21px;
+    font-weight: 800;
+    color: var(--navy);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+.logo small {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--navy);
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--gold);
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+/* HERO SECTION */
+
+.hero {
+    min-height: 430px;
+    display: flex;
+    align-items: center;
+    padding: 80px 8%;
+    color: white;
+    background:
+    linear-gradient(rgba(16,29,43,0.85),rgba(16,29,43,0.75)),
+    url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=85')
+    center/cover no-repeat;
+}
+
+.hero-content {
+    max-width: 700px;
+    animation: slideUp 1s ease;
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+.hero h1 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(40px, 6vw, 65px);
+    line-height: 1.15;
+    margin: 18px 0;
+}
+
+.hero h1 span {
+    color: var(--gold);
+}
+
+.hero p {
+    max-width: 550px;
+    color: #e1e5e9;
+    font-size: 16px;
+}
+
+/* ABOUT SECTION */
+
+.about {
+    padding: 90px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.about-content h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 36px;
+    color: var(--navy);
+    margin: 12px 0 20px;
+}
+
+.about-content p {
+    color: #687582;
+    margin-bottom: 15px;
+}
+
+/* EXPERIENCE BOX */
+
+.experience {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 15px 22px;
+    background: var(--navy);
+    color: white;
+    border-left: 4px solid var(--gold);
+}
+
+.experience strong {
+    color: var(--gold);
+    font-size: 24px;
+}
+
+/* MISSION VISION */
+
+.values {
+    background: var(--light);
+    padding: 85px 8%;
+    text-align: center;
+}
+
+.section-heading h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 36px;
+    color: var(--navy);
+    margin: 10px 0 40px;
+}
+
+.value-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    text-align: left;
+}
+
+.value-card {
+    background: white;
+    padding: 35px 28px;
+    border-bottom: 4px solid var(--gold);
+    transition: 0.4s;
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.09);
+}
+
+.value-card .number {
+    color: var(--gold);
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.value-card h3 {
+    font-family: 'Manrope', sans-serif;
+    color: var(--navy);
+    font-size: 23px;
+    margin: 15px 0;
+}
+
+.value-card p {
+    color: #687582;
+}
+
+/* WHY US */
+
+.why-us {
+    padding: 85px 8%;
+    text-align: center;
+}
+
+.why-us h2 {
+    font-family: 'Manrope', sans-serif;
+    color: var(--navy);
+    font-size: 36px;
+    margin: 10px 0 35px;
+}
+
+.why-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.why-card {
+    padding: 28px;
+    border: 1px solid #e5e5e5;
+    transition: 0.3s;
+}
+
+.why-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-7px);
+}
+
+.why-card h3 {
+    color: var(--navy);
+    margin-bottom: 10px;
+}
+
+.why-card p {
+    color: #687582;
+}
+
+/* FOOTER */
+
+footer {
+    background: var(--navy);
+    color: white;
+    text-align: center;
+    padding: 28px 15px;
+    font-size: 13px;
+}
+
+footer span {
+    color: var(--gold);
+}
+
+/* ANIMATIONS */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 850px) {
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .value-container,
+    .why-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width: 650px) {
+    header {
+        padding: 15px 5%;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 22px 7%;
+        gap: 18px;
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+    .hero {
+        padding: 70px 7%;
+    }
+
+    .about,
+    .values,
+    .why-us {
+        padding: 60px 7%;
+    }
+
+    .about-content h2,
+    .section-heading h2,
+    .why-us h2 {
+        font-size: 29px;
+    }
+
+    .value-container,
+    .why-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image img {
+        height: 280px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header>
+    <a href="#" class="logo">
+        BAWABAT <span>ADAN</span>
+        <small>GENERAL CONTRACTING L.L.C.</small>
+    </a>
+
+    <button class="menu-btn" aria-label="Toggle menu">☰</button>
+
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="#" class="active">ABOUT</a>
+        <a href="expertise.html">EXPERTISE</a>
+        <a href="services.html">SERVICES</a>
+        <a href="projects.html">PROJECTS</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+    <div class="hero-content">
+        <div class="eyebrow">WHO WE ARE</div>
+
+        <h1>
+            Building Trust.<br>
+            <span>Creating Value.</span>
+        </h1>
+
+        <p>
+            We are committed to quality construction,
+            professional services and building strong
+            relationships with our clients.
+        </p>
+    </div>
+</section>
+
+<!-- ABOUT US -->
+
+<section class="about reveal">
+
+    <div class="about-image">
+        <img
+        src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1100&q=85"
+        alt="Modern construction project">
+    </div>
+
+    <div class="about-content">
+
+        <div class="eyebrow">ABOUT BAWABAT ADAN</div>
+
+        <h2>A Reliable Construction Partner</h2>
+
+        <p>
+            Bawabat Adan General Contracting L.L.C.
+            was established in the United Arab Emirates
+            to provide high-quality construction services.
+        </p>
+
+        <p>
+            Our team brings practical construction experience
+            and a commitment to professional project delivery.
+            We focus on understanding client requirements,
+            maintaining quality and delivering dependable work.
+        </p>
+
+        <p>
+            We believe in trust, teamwork, innovation and
+            continuous improvement in every project we undertake.
+        </p>
+
+        <div class="experience">
+            <strong>8+ Years</strong>
+            <br>
+            Construction Experience of Our Personnel
+        </div>
+
+    </div>
+
+</section>
+
+<!-- MISSION VISION OBJECTIVES -->
+
+<section class="values reveal">
+
+    <div class="section-heading">
+        <div class="eyebrow">OUR PURPOSE</div>
+        <h2>Mission, Vision & Objectives</h2>
+    </div>
+
+    <div class="value-container">
+
+        <div class="value-card">
+            <div class="number">01</div>
+            <h3>Our Mission</h3>
+            <p>
+                To build trust and mutual respect with our
+                clients, architects, engineers, subcontractors
+                and suppliers while striving for customer
+                satisfaction and exceptional performance.
+            </p>
+        </div>
+
+        <div class="value-card">
+            <div class="number">02</div>
+            <h3>Our Vision</h3>
+            <p>
+                To become a regional leader in building
+                construction by providing value, quality
+                products and superior services.
+            </p>
+        </div>
+
+        <div class="value-card">
+            <div class="number">03</div>
+            <h3>Our Objectives</h3>
+            <p>
+                To be a reliable construction company using
+                best practices and modern technology while
+                focusing on continuous improvement.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- WHY CHOOSE US -->
+
+<section class="why-us reveal">
+
+    <div class="eyebrow">WHY CHOOSE US</div>
+
+    <h2>What Makes Us Different?</h2>
+
+    <div class="why-container">
+
+        <div class="why-card">
+            <h3>Quality Work</h3>
+            <p>
+                We focus on workmanship and meeting
+                project requirements and standards.
+            </p>
+        </div>
+
+        <div class="why-card">
+            <h3>Experienced Team</h3>
+            <p>
+                Our personnel bring construction experience
+                and practical project knowledge.
+            </p>
+        </div>
+
+        <div class="why-card">
+            <h3>Safety First</h3>
+            <p>
+                We emphasize safety training, HSE policies,
+                routine checks and awareness.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+    © <span id="year"></span>
+    <span>BAWABAT ADAN</span>
+    General Contracting L.L.C. All Rights Reserved.
+</footer>
+
+<script>
+// MOBILE NAVIGATION
+
+const menuBtn = document.querySelector(".menu-btn");
+const nav = document.querySelector("nav");
+
+menuBtn.addEventListener("click", function() {
+    nav.classList.toggle("open");
+
+    menuBtn.textContent =
+        nav.classList.contains("open") ? "✕" : "☰";
+});
+
+// CLOSE MENU AFTER CLICK
+
+document.querySelectorAll("nav a").forEach(link => {
+    link.addEventListener("click", () => {
+        nav.classList.remove("open");
+        menuBtn.textContent = "☰";
+    });
+});
+
+// AUTOMATIC YEAR
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+// SCROLL REVEAL ANIMATION
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+    });
+}, {
+    threshold: 0.15
+});
+
+document.querySelectorAll(".reveal").forEach(section => {
+    observer.observe(section);
+});
+</script>
+
+</body>
+</html>
